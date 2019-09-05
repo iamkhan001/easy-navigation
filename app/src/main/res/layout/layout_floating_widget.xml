@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/root_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="UselessParent">
+
+        <!--View while view is collapsed-->
+        <LinearLayout
+            android:id="@+id/collapse_view"
+            android:layout_width="wrap_content"
+            android:visibility="visible"
+            android:padding="@dimen/space_small"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                    android:id="@+id/collapsed_iv"
+                    android:layout_width="@dimen/home_icon"
+                    android:layout_height="@dimen/home_icon"
+                    android:layout_margin="@dimen/space_small"
+                    android:src="@mipmap/ic_launcher"
+                    tools:ignore="ContentDescription"/>
+
+        </LinearLayout>
+
+        <!--View while view is expanded-->
+        <LinearLayout
+            android:id="@+id/expanded_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#77FFFFFF"
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:padding="@dimen/space_small">
+
+
+
+            <ImageView
+                    android:id="@+id/imgBack"
+                    android:layout_width="@dimen/nav_buttons"
+                    android:layout_height="@dimen/nav_buttons"
+                    android:src="@mipmap/ic_back"
+                    android:layout_margin="@dimen/space_small"
+                    tools:ignore="ContentDescription"/>
+
+            <ImageView
+                    android:id="@+id/imgHome"
+                    android:layout_width="@dimen/nav_buttons"
+                    android:layout_height="@dimen/nav_buttons"
+                    android:src="@mipmap/ic_home_circle"
+                    android:layout_margin="@dimen/space_small"
+                    tools:ignore="ContentDescription"/>
+
+            <ImageView
+                    android:id="@+id/imgApps"
+                    android:layout_width="@dimen/nav_buttons"
+                    android:layout_height="@dimen/nav_buttons"
+                    android:visibility="gone"
+                    android:src="@mipmap/ic_menu_apps"
+                    android:layout_margin="@dimen/space_small"
+                    tools:ignore="ContentDescription"/>
+
+            <ImageView
+                    android:id="@+id/imgRecent"
+                    android:layout_width="@dimen/nav_buttons"
+                    android:layout_height="@dimen/nav_buttons"
+                    android:src="@mipmap/ic_recent"
+                    android:layout_margin="@dimen/space_small"
+                    tools:ignore="ContentDescription"/>
+
+            <ImageView
+                    android:id="@+id/imgMic"
+                    android:layout_width="@dimen/nav_buttons"
+                    android:layout_height="@dimen/nav_buttons"
+                    android:src="@mipmap/ic_mic"
+                    android:layout_margin="@dimen/space_small"
+                    android:visibility="gone"
+                    tools:ignore="ContentDescription"/>
+
+
+            <ImageView
+                    android:id="@+id/imgCloseApp"
+                    android:layout_width="@dimen/nav_buttons"
+                    android:layout_height="@dimen/nav_buttons"
+                    android:visibility="gone"
+                    android:src="@mipmap/ic_close_app"
+                    android:layout_margin="@dimen/space_small"
+                    tools:ignore="ContentDescription"/>
+
+
+            <ImageView
+                    android:id="@+id/imgExit"
+                    android:layout_width="@dimen/nav_buttons"
+                    android:layout_height="@dimen/nav_buttons"
+                    android:src="@mipmap/ic_exit"
+                    android:layout_margin="@dimen/space_small"
+                    tools:ignore="ContentDescription"/>
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                <ImageView
+                        android:id="@+id/close_button"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/ic_close"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

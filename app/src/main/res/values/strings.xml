@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Easy Navigation</string>
+    <string name="action_settings">Turn VirtualSoftKey\'s service on or off, Remember if the service is off you cannot use Soft Key Bar in your app.\n Remember, We care about users privacy and do not collect any data from users, this is an open source project and you can find the URL for the project on the main page.</string>
+
+    <!--Permission Dialog-->
+    <string name="Permission_draw_overlays_title">1. Draw over other Apps</string>
+    <string name="Permission_draw_overlays_content">In order for app to work properly and show the navigation bar (Soft Key Bar) you need to allow the permissions to draw over other apps. \nSettings > Apps > Advanced > Draw over other apps</string>
+    <string name="Permission_accessibility_title">2. Accessibility service</string>
+    <string name="Permission_accessibility_content">And then enable the Accessibility service. \nSettings > Accessibility > VirtualSoftKeys</string>
+
+    <string name="Permission_goto_page">Go to Settings</string>
+    <string name="Permission_allow_system_alert_first">Please allow draw over apps permission</string>
+    <string name="Permission_allowed">Permission Granted</string>
+    <string name="Permission_allow_system_alert_first_and_restart_service">"Please allow this permission first , and select VirtualSoftKeys in accessibility"</string>
+    <string name="Toast_allow_system_alert_first">"Please allow draw over apps permission first"</string>
+
+
+    <!--Description Dialog-->
+    <string name="description_howtouse_title">How to use</string>
+    <string name="description_howtouse_content">Swiping up in touch view for opening the Softkey bar,then swiping down can cancel</string>
+    <string name="description_config_title">Screen config</string>
+    <string name="description_config_content">Rotating screen for changing the portrait or landscape config ,they are independent value in every config</string>
+    <string name="description_clsoe">Don\'t remind</string>
+    <string name="description_i_knew">I knew</string>
+
+    <!--accessibility service error Dialog-->
+    <string name="accessibility_service_error_title">Service error</string>
+    <string name="accessibility_service_error_content">Service seem has some problem , please help me to open VirtualSoftKeys in accessibility again!</string>
+    <string name="accessibility_service_error_go">Go</string>
+
+
+
+    <string name="dialog_ok">OK</string>
+    <string name="dialog_cancel">Cancel</string>
+
+</resources>

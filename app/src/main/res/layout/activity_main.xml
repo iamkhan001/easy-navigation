@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        tools:ignore="HardcodedText"
+        android:padding="@dimen/space_normal"
+        tools:context=".MainActivity">
+
+    <TextView
+            android:layout_width="match_parent"
+            android:text="Icon Direction"
+            android:layout_margin="@dimen/space_normal"
+            android:padding="@dimen/space_normal"
+            android:textSize="@dimen/text_l"
+            android:layout_height="wrap_content"/>
+
+
+    <RadioGroup
+            android:id="@+id/rbParent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/space_normal"
+            android:paddingEnd="@dimen/space_normal"
+            android:layout_marginStart="@dimen/space_normal"
+            android:layout_marginEnd="@dimen/space_normal"
+            android:orientation="horizontal">
+
+        <RadioButton
+                android:id="@+id/rbHorizontal"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:text="Horizontal"
+                android:textSize="@dimen/text_l"
+                android:drawablePadding="@dimen/space_normal"
+                android:drawableStart="@drawable/ic_stay_current_landscape"
+                android:layout_height="wrap_content"/>
+
+        <RadioButton
+                android:id="@+id/rbVertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:text="Vertical"
+                android:drawablePadding="@dimen/space_normal"
+                android:textSize="@dimen/text_l"
+                android:drawableStart="@drawable/ic_stay_current_portrait"
+                android:layout_height="wrap_content"/>
+
+    </RadioGroup>
+
+    <TextView
+            android:layout_width="match_parent"
+            android:text="Enable / Disable Navigation Options"
+            android:layout_margin="@dimen/space_normal"
+            android:padding="@dimen/space_normal"
+            android:textSize="@dimen/text_l"
+            android:layout_height="wrap_content"/>
+    <Switch
+            android:id="@+id/swMic"
+            android:text="Mic Button"
+            android:drawableStart="@mipmap/ic_mic"
+            android:textSize="@dimen/text_l"
+            android:padding="@dimen/space_normal"
+            android:layout_marginTop="@dimen/space_normal"
+            android:drawablePadding="@dimen/space_small"
+            android:layout_margin="@dimen/space_small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <Switch
+            android:id="@+id/swCloseOpenApp"
+            android:text="Close Current Open App"
+            android:drawableStart="@mipmap/ic_close_app"
+            android:textSize="@dimen/text_l"
+            android:padding="@dimen/space_normal"
+            android:drawablePadding="@dimen/space_small"
+            android:layout_margin="@dimen/space_small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <Switch
+            android:id="@+id/swAppDrawer"
+            android:text="App Drawer"
+            android:drawableStart="@mipmap/ic_menu_apps"
+            android:textSize="@dimen/text_l"
+            android:padding="@dimen/space_normal"
+            android:drawablePadding="@dimen/space_small"
+            android:layout_margin="@dimen/space_small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+    <Button
+            android:id="@+id/btnOpen"
+            style="@style/TextAppearance.AppCompat.Widget.Button.Colored"
+            android:background="@color/colorAccent"
+            android:paddingStart="@dimen/space_normal"
+            android:paddingEnd="@dimen/space_normal"
+            android:layout_marginTop="@dimen/space_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Show Easy Navigation Buttons"/>
+
+</LinearLayout>
