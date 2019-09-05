@@ -98,27 +98,27 @@ class MainActivity : AppCompatActivity() {
         return false
     }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-
-        if (requestCode == CODE_DRAW_OVER_OTHER_APP_PERMISSION) {
-
-            if (resultCode == Activity.RESULT_OK) {
-                startApp()
-            } else {
-                Toast.makeText(
-                    this,
-                    "Draw over other app permission not available. Closing the application",
-                    Toast.LENGTH_SHORT
-                ).show()
-
-                finish()
-            }
-        } else {
-            super.onActivityResult(requestCode, resultCode, data)
-        }
-
-    }
+//    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+//        super.onActivityResult(requestCode, resultCode, data)
+//
+//        if (requestCode == CODE_DRAW_OVER_OTHER_APP_PERMISSION) {
+//
+//            if (resultCode == Activity.RESULT_OK) {
+//                startApp()
+//            } else {
+//                Toast.makeText(
+//                    this,
+//                    "Draw over other app permission not available. Closing the application",
+//                    Toast.LENGTH_SHORT
+//                ).show()
+//
+//                finish()
+//            }
+//        } else {
+//            super.onActivityResult(requestCode, resultCode, data)
+//        }
+//
+//    }
 
     private fun startApp() {
 
