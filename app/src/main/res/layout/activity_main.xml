@@ -96,12 +96,23 @@
     <Button
             android:id="@+id/btnOpen"
             style="@style/TextAppearance.AppCompat.Widget.Button.Colored"
+            android:background="@color/colorPrimary"
+            android:paddingStart="@dimen/space_normal"
+            android:paddingEnd="@dimen/space_normal"
+            android:layout_marginTop="@dimen/space_normal"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="Show Easy Navigation Buttons"/>
+
+    <Button
+            android:id="@+id/btnStop"
+            style="@style/TextAppearance.AppCompat.Widget.Button.Colored"
             android:background="@color/colorAccent"
             android:paddingStart="@dimen/space_normal"
             android:paddingEnd="@dimen/space_normal"
             android:layout_marginTop="@dimen/space_normal"
-            android:layout_width="wrap_content"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:text="Show Easy Navigation Buttons"/>
+            android:text="Stop Easy Navigation Buttons"/>
 
 </LinearLayout>

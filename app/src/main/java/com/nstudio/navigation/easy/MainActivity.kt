@@ -51,6 +51,8 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        btnStop.setOnClickListener { FloatingViewService.getsSharedInstance()?.stopSelf() }
+
         init()
     }
 
