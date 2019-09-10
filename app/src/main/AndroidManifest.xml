@@ -27,7 +27,7 @@
 
 
         <service
-                android:name=".FloatingViewService"
+                android:name=".services.FloatingViewService"
                 android:exported="false"
                 android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE" >
 
@@ -43,6 +43,20 @@
         <meta-data
                 android:name="com.robotemi.sdk.metadata.SKILL"
                 android:value="@string/app_name"/>
+
+        <meta-data
+                android:name="com.robotemi.sdk.metadata.ACTIONS"
+                android:value="
+                home.welcome,
+                home.dance,
+                home.sleep
+                " />
+
+        <meta-data
+                android:name="com.robotemi.sdk.metadata.CONTEXTS"
+                android:value="
+            radio,
+            media" />
 
     </application>
 

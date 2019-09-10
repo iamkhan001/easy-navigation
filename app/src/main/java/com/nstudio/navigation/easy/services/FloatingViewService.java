@@ -1,4 +1,4 @@
-package com.nstudio.navigation.easy;
+package com.nstudio.navigation.easy.services;
 
 import android.accessibilityservice.AccessibilityService;
 import android.accessibilityservice.AccessibilityServiceInfo;
@@ -14,8 +14,9 @@ import android.view.accessibility.AccessibilityEvent;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import com.nstudio.navigation.easy.common.AppSettings;
-import com.nstudio.navigation.easy.common.SPFManager;
+import com.nstudio.navigation.easy.MainActivity;
+import com.nstudio.navigation.easy.R;
+import com.nstudio.navigation.easy.app.AppSettings;
 
 
 public class FloatingViewService extends AccessibilityService {
@@ -30,7 +31,7 @@ public class FloatingViewService extends AccessibilityService {
     @SuppressLint("StaticFieldLeak")
     private static FloatingViewService sSharedInstance;
     private Context context;
-
+    private boolean allowTraceEvent = false;
     private View.OnClickListener clickListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
@@ -72,7 +73,7 @@ public class FloatingViewService extends AccessibilityService {
     protected void onServiceConnected() {
         super.onServiceConnected();
         sSharedInstance = this;
-        updateServiceInfo(SPFManager.getSmartHidden(context));
+        updateServiceInfo(allowTraceEvent);
         updateView();
     }
 

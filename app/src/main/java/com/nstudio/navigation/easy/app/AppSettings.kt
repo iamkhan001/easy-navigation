@@ -1,9 +1,9 @@
-package com.nstudio.navigation.easy.common
+package com.nstudio.navigation.easy.app
 
 import android.content.Context
 import android.content.SharedPreferences
 
-class AppSettings(val context: Context){
+class AppSettings(private val context: Context){
 
     companion object {
         const val VERTICAL = 1

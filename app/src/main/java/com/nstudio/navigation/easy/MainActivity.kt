@@ -1,6 +1,5 @@
 package com.nstudio.navigation.easy
 
-import android.app.Activity
 import android.content.Intent
 import android.net.Uri
 import android.os.Build
@@ -8,9 +7,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.Settings
 import android.util.Log
+import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
-import com.nstudio.navigation.easy.common.AppSettings
+import com.nstudio.navigation.easy.app.AppSettings
+import com.nstudio.navigation.easy.services.FloatingViewService
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -25,6 +26,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        Log.e("test", "$packageName.MainActivity")
 
         appSettings = AppSettings(this@MainActivity)
 
@@ -51,7 +53,15 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        btnStop.setOnClickListener { FloatingViewService.getsSharedInstance()?.stopSelf() }
+        btnStop.setOnClickListener {
+            if(FloatingViewService.getsSharedInstance()==null){
+                Log.e("Stop","Instance is NULLLLLL")
+                return@setOnClickListener
+            }
+            stopService(Intent(this, FloatingViewService::class.java))
+        }
+
+        btnStop.visibility = View.GONE
 
         init()
     }
@@ -127,13 +137,13 @@ class MainActivity : AppCompatActivity() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if (Settings.canDrawOverlays(this)){
                 startService(Intent(this@MainActivity, FloatingViewService::class.java))
-                finishAndRemoveTask()
+                //finishAndRemoveTask()
                 return
             }
             Toast.makeText(this@MainActivity,"Permission Denied",Toast.LENGTH_SHORT).show()
         } else {
             startService(Intent(this@MainActivity, FloatingViewService::class.java))
-            finishAndRemoveTask()
+            //finishAndRemoveTask()
         }
 
     }
